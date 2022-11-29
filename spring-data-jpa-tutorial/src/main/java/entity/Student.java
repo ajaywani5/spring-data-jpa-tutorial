@@ -10,7 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+@Entity   //Entity created
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
