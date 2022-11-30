@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.http.converter.json.GsonBuilderUtils;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,5 +32,18 @@ private String guardianName;
 private String guardianEmail;
     @Column(name="gMobile")
 private String guardianMobile;
-//add to string method
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", emailId='" + emailId + '\'' +
+                ", guardianName='" + guardianName + '\'' +
+                ", guardianEmail='" + guardianEmail + '\'' +
+                ", guardianMobile='" + guardianMobile + '\'' +
+                '}';
+    }
+    //add to string method
 }
